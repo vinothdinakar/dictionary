@@ -81,3 +81,7 @@ This will install the dependencies mentioned in package.json to node_modules fol
       /api/dictionary/getKey/:id/:key<br>
       /api/dictionary/deleteDictionary/:id<br>
       
+<h2>Observation</h2>
+1) The create Dictionary api can be modified to accept the list of key and value. This will help to reduce the
+number of api calls.<br>
+2) The delete api returns the status code as 204 but the dictionary object is not getting deleted.<br>

@@ -59,3 +59,11 @@ This will install the dependencies mentioned in package.json to node_modules fol
   will call the apiary dictionary api.
 
 ![Server Screenshot](/public/images/server.png)
+
+ The following are the list of wrapper api provided by this application<br>
+      /api/dictionary/create<br>
+      /api/dictionary/createOrModifyKey/:id/:key/:value<br>
+      /api/dictionary/getAllKeys/:id<br>
+      /api/dictionary/getKey/:id/:key<br>
+      /api/dictionary/deleteDictionary/:id<br>
+      

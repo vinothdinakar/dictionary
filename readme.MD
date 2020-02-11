@@ -1,6 +1,16 @@
-<h1>Test cases for the Dictionary apiary apis.</h1>
+<h1>Test cases and the Wrapper API for the Dictionary apiary apis.</h1>
   
-The project contains the wrapper api for the Dictionary api and test cases for the Dictionary api
+The project contains the wrapper api for the Dictionary api and test cases for the Dictionary api.
+
+NodeJS is used to create the server for the wrapper api. The server's function will in turn call the
+Apiary dictionary api.<br>
+
+<h4>NPM packages Used :</h4>
+Express is used to create the underlying web framework<br>
+Winston framework is used to ease the logging feature<br>
+Configs are added to a separate file. This will help in easy maintenance of the application. <br>
+Jest framework is used for the test cases.<br>
+
 
 <h2>Folder Structure</h2>
 
@@ -21,10 +31,13 @@ The project contains the wrapper api for the Dictionary api and test cases for t
   Route folder contains the wrapper for the apiary api
 
 <h4>module->dictionary->controller</h4>
-  Controller folder contains the function which make the api call to apiary api
+  Controller folder contains the function which make the api call to apiary api. Controllers are separated from the
+  routers to make sure the request and response object remains in the router object and the actual business logic is
+  added to controller. This will help us to reuse the controller function in other modules if needed.
 
 <h4>module->dictionary->test</h4>
-  Test folder contains all the testcase written for apiary api
+  Test folder contains all the testcase written for apiary api. The test cases uses the controller function to make
+  the api calls.
 
 <h4>server.js</h4>
   This is the starter file from which we can start the application.
@@ -33,6 +46,7 @@ The project contains the wrapper api for the Dictionary api and test cases for t
 
 Node Version used - 12.13.1<br>
 Npm Version used - 6.12.1
+Jest Version used - 25.1.0
 
 
 1) Setup Authorization Header<br>

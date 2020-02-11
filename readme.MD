@@ -36,7 +36,7 @@ Npm Version used - 6.12.1
 
 
 1) Setup Authorization Header<br>
-  Before starting the server or executing the test cases, Please modify the apiaryDictionaryAuthCode property in
+  Before starting the server or executing the test cases, Please update the 'apiaryDictionaryAuthCode' property in
   the config file. The config file is located in '/config/config.js'. The Authorization Header code is needed for
   running the apiary apis.
 

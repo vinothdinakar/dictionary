@@ -16,7 +16,7 @@ var config = {
         getKey: 'https://dictionary.iachieved.it/dictionary/:id/keys/:key',
         deleteDictionary: 'https://dictionary.iachieved.it/dictionary/:id'
     },
-    apiaryDictionaryAuthCode: 'Basic cWFjYW5kaWRhdGU6c29mdEtpdHR5TGl0dGxlQmFsbG9mRnVy'
+    apiaryDictionaryAuthCode: ''
 };
 
 module.exports = config;

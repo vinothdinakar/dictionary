@@ -1,8 +1,13 @@
 'use strict';
-/* eslint no-console: 0 */
 
-/**
- * Module dependencies.
+/***
+ * App - The file implements the server related function like init, start and error handling functions
+ *
+ * @type {require} logger - local utility package for logging. Uses Winston logging
+ * @type {require} config - local package to store all the application related config
+ * @type {require} express - local package to wrap the actual express nom package
+ * @type {require} http - npm package to handle the node http server creation
+ *
  */
 var config = require('../config/config');
 var logger = require('./logger');
@@ -98,30 +103,6 @@ function onListening() {
         : 'port ' + addr.port;
     logger.info('Listening on ' + bind);
 }
-
-/**
- * Normalize a port into a number, string, or false.
- *
-
- function normalizePort(val) {
-    var port = parseInt(val, 10);
-
-    if (isNaN(port)) {
-        // named pipe
-        return val;
-    }
-
-    if (port >= 0) {
-        // port number
-        return port;
-    }
-
-    return false;
-}
-
- */
-
-
 
 process.on('uncaughtException', function (err) {
     logger.error(err);

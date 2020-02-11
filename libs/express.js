@@ -1,12 +1,18 @@
 'use strict';
 
-/**
- * Module dependencies.
+/***
+ * App - The file implements the server related function like init, start and error handling functions
+ *
+ * @type {require} logger - local utility package for logging. Uses Winston logging
+ * @type {require} express - npm package for the web framework
+ * @type {require} path - npm package to read and resolve the folder structure with the application
+ * @type {require} body-parser - npm package to parse the request bodies in the middleware
+ * @type {require} fs - npm package to read the folder and files in the application
+ *
  */
 var express = require('express');
 var path = require('path');
 var logger = require('./logger');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
@@ -20,7 +26,6 @@ module.exports.initMiddleware = function (app) {
     // Request body parsing middleware
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(cookieParser());
 };
 
 /**

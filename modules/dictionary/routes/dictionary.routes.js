@@ -1,9 +1,18 @@
 'use strict';
 
-// include dependency
+/***
+ * Dictionary.Routes - The file implements the wrapper api of the apiary api for the dictionary
+ *
+ * @type {require} express - npm package for the web framework
+ * @type {require} path - npm package to read and resolve the folder structure with the application
+ * @type {require} logger - local utility package for logging. Uses Winston logging
+ * @type {require} dictionary.controllers - local package which implements the actual api calls
+ * @type {require} request - npm package to handle the http/https calls
+ *
+ */
 var express = require('express');
 var router = express.Router();
-var url = require('url');
+//var url = require('url');
 var path = require('path');
 var logger = require(path.resolve('./libs/logger'));
 var dictionaryController = require('../controllers/dictionary.controllers');
@@ -52,12 +61,5 @@ router.get('/deleteDictionary/:id', function (req, res, next) {
         res.json(returnObj);
     });
 });
-
-
-
-
-
-//45e75b2b-71bb-417d-bc60-3d98e485d401
-
 
 module.exports = router;

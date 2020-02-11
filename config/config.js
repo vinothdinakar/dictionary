@@ -1,5 +1,6 @@
-/*
-    All the config variables are stored in this common file
+/***
+ * Config - The file stores all the application related config parameters
+ * exports the complete config object
  */
 
 var config = {

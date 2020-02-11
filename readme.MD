@@ -50,6 +50,7 @@ This will install the dependencies mentioned in package.json to node_modules fol
     >npm test<br>
   The above command executes all the test cases available in the test file (dictionary.test.js)
   
+  ![Test Screenshot](/public/images/test.png)
   
 
 5) Running Server<br>
@@ -57,3 +58,4 @@ This will install the dependencies mentioned in package.json to node_modules fol
   The above command starts the node server and listen through port 3000. We can call the wrapper api which in turn
   will call the apiary dictionary api.
 
+![Server Screenshot](/public/images/server.png)

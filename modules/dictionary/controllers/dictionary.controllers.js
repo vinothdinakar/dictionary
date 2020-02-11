@@ -1,6 +1,5 @@
 'use strict';
 
-var Q = require('q');
 var path = require('path');
 var logger = require(path.resolve('./libs/logger'));
 var request = require('request');

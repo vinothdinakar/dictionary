@@ -62,7 +62,6 @@ var dictionary = function () {
         var _url = config.apiaryDictionaryUrl.createOrModifyKey;
         _url = _url.replace(':id', id);
         _url = _url.replace(':key', key);
-        _url += '?id=' + id + '&key=' + key;
 
         logger.info(_url);
 

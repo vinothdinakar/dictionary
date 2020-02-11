@@ -45,7 +45,7 @@ Jest framework is used for the test cases.<br>
 <h2>Project Setup</h2>
 
 Node Version used - 12.13.1<br>
-Npm Version used - 6.12.1
+Npm Version used - 6.12.1<br>
 Jest Version used - 25.1.0
 
 

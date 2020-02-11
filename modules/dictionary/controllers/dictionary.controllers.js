@@ -1,5 +1,15 @@
 'use strict';
 
+/***
+ * Dictionary.Controllers - The file implements the function which calls the apiary api for the dictionary
+ *
+ * @type {require} logger - local utility package for logging. Uses Winston logging
+ * @type {require} config - local package to store all the application related config
+ * @type {require} request - npm package to handle the http/https calls
+ * @type {require} path - npm package to read and resolve the folder structure with the application
+ *
+ */
+
 var path = require('path');
 var logger = require(path.resolve('./libs/logger'));
 var request = require('request');
@@ -7,6 +17,14 @@ var config = require(path.resolve('./config/config'));
 
 var dictionary = function () {
 
+    /**
+     * createDictionary function implements the createDictionary API
+     * The API creates an empty dictionary and pass the dictionary id in the response
+     * URL and the Authorization code are read from the config file
+     *
+     * @param callbackFn {Function} Accepts the callback function as parameter to which the
+     * response will be passed into
+     */
     this.createDictionary = function (callbackFn) {
         logger.info('Creating Dictionary');
 
@@ -27,6 +45,17 @@ var dictionary = function () {
         });
     };
 
+    /**
+     * createOrModifyKey function implements the createOrModifyKey API
+     * The API creates a new key or modifies the existing key
+     * URL and the Authorization code are read from the config file
+     *
+     * @param id {String} id of the existing dictionary
+     * @param key {String} name of the key to be added or modified
+     * @param value {Number|String|Boolean|Object|Array} value of the key to be added or modified
+     * @param callbackFn {Function} Accepts the callback function as parameter to which the
+     * response will be passed into
+     */
     this.createOrModifyKey = function (id, key, value, callbackFn) {
         logger.info('Creating or Modifying Key');
 
@@ -59,6 +88,15 @@ var dictionary = function () {
         });
     };
 
+    /**
+     * getAllKeys function implements the getAllKeys API
+     * The API gets the list of keys and their value in the existing dictionary
+     * URL and the Authorization code are read from the config file
+     *
+     * @param id {String} id of the existing dictionary
+     * @param callbackFn {Function} Accepts the callback function as parameter to which the
+     * response will be passed into
+     */
     this.getAllKeys = function (id, callbackFn) {
         logger.info('Getting All Keys');
         logger.info(id);
@@ -84,6 +122,16 @@ var dictionary = function () {
         });
     };
 
+    /**
+     * getKey function implements the getKey API
+     * The API gets the value of the key in the existing dictionary
+     * URL and the Authorization code are read from the config file
+     *
+     * @param id {String} id of the existing dictionary
+     * @param key {String} name of the key
+     * @param callbackFn {Function} Accepts the callback function as parameter to which the
+     * response will be passed into
+     */
     this.getKey = function (id, key, callbackFn) {
         logger.info('Getting Selected Key value');
         logger.info(id);
@@ -110,6 +158,15 @@ var dictionary = function () {
         });
     };
 
+    /**
+     * deleteDictionary function implements the deleteDictionary API
+     * The API deletes the existing dictionary
+     * URL and the Authorization code are read from the config file
+     *
+     * @param id {String} id of the existing dictionary
+     * @param callbackFn {Function} Accepts the callback function as parameter to which the
+     * response will be passed into
+     */
     this.deleteDictionary = function (id, callbackFn) {
         logger.info('Deleting Dictionary');
 

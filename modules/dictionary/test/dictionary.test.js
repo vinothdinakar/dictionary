@@ -12,7 +12,7 @@ const dictionaryController = require('../controllers/dictionary.controllers');
 
 describe("Dictionary API", () => {
 
-    let dictionaryId = 0;
+    let dictionaryId = '0';
     // Sample object for testing
     let dictionaryObj = {
         name: 'apple',

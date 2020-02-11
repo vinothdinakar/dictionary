@@ -1,3 +1,11 @@
+'use strict';
+
+/***
+ * dictionary.test - The file lists out the test cases for the dictionary api
+ *
+ * @type {require} dictionary.controllers - The actual api calls are implemented in this controller file
+ *
+ */
 
 process.env.NODE_ENV = 'test';
 const dictionaryController = require('../controllers/dictionary.controllers');
@@ -5,6 +13,7 @@ const dictionaryController = require('../controllers/dictionary.controllers');
 describe("Dictionary API", () => {
 
     let dictionaryId = 0;
+    // Sample object for testing
     let dictionaryObj = {
         name: 'apple',
         color: ['green', 'red'],
